@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+*{font-family: 'Orbitron', sans-serif;}
+
+#wrap{position: fixed; top: 0; left: 0; width: 100%; height: 100%; min-width: 1400px; min-height: 780px; background: url(../img/bg_morning.jpg)no-repeat; background-size: cover;}
+.logo{width: 90px; height: 80px; position: fixed; top: 30px; left: 60px; background: url(../img/logo_b.png)no-repeat; background-size: contain;}
+#gnb{position: fixed; top: 50px; right: 200px;}
+#gnb li{float: left; margin-left: 20px;}
+#gnb li a{font-size: 14px; font-weight: bold; color: #555;}
+
+.sns{position: fixed; top: 50px; right: 50px;}
+.sns li{float: left; margin-left: 20px;}
+.sns li i{font-size: 18px; color: #555;}
+
+article{position: absolute; top: 350px; left: 150px; width: 450px;}
+article p{font-size: 50px; color: #666;}
+article p strong{color: #111;}
+article em{font-size: 14px; color: #333;}
+
+figure{position: absolute; top: 230px; right: -300px; width: 1226px; height: 809px; background: url(../img/phone_morning.png); transition: all .2s; z-index: 999;}
+figure p{position: absolute; top: 101px; left: 137px; width: 540px; height: 307px; font-size: 60px; font-weight: bold; color: #333; padding-left: 50px; box-sizing: border-box; line-height: 4.6; overflow: hidden;}
+figure p span{position: relative; z-index: 5;}
+
+nav{position: fixed; bottom: 70px; left: 6%; width: 88%; z-index: 9999;}
+nav li{float: left; width: 25%;}
+nav li a{display: block; width: 98%; height: 35px; background: #fff; color: #111; margin: 0 auto; transition: all .5s; font-size: 12px; font-weight: bold; line-height: 2.8; letter-spacing: 3px; padding-left: 30px; box-sizing: border-box; opacity: .6; position: relative;}
+nav li:hover a{background: #111; color: #ddd; opacity: .9;}
+nav li.on a{background: #111; color: #ddd; opacity: .9;}
+
+#wrap > img:nth-child(1){position: absolute; top: 0; left: -1146px; animation: ani1 110s linear infinite; z-index: 4; opacity: .8;}
+#wrap > img:nth-child(2){position: absolute; top: 20px; left: 0; animation: ani2 100s linear infinite; z-index: 4; opacity: .8;}
+
+figure img.cl1{width: 600px; height: auto; position: absolute; top: 30px; left: -600px; animation: ani3 110s linear infinite; z-index: 4;}
+figure img.cl2{width: 700px; height: auto; position: absolute; top: 20px; left: 0px; animation: ani4 100s linear infinite; z-index: 4;}
+
+@keyframes ani3 {
+    0%{left: -600px;}
+    100%{left: 540px;}
+}
+
+@keyframes ani4 {
+    0%{left: 0px;}
+    50%{left: 540px; opacity: 0;}
+    50.001%{left: -700px; opacity: .8;}
+    100%{left: 0;}
+}
+
+@keyframes ani1 {
+    0%{left: -1146px;}
+    100%{left: 1950px;}
+}
+
+@keyframes ani2 {
+    0%{left: 0px;}
+    50%{left: 1950px; opacity: 0;}
+    50.001%{left: -1840px; opacity: .8;}
+    100%{left: 0;}
+}
+
+/*아침테마*/
+#wrap.morning{background-image: url(../img/bg_morning.jpg);}
+#wrap.morning figure{background-image: url(../img/phone_morning.png);}
+
+/*오후테마*/
+#wrap.afternoon{background-image: url(../img/bg_afternoon.jpg);}
+#wrap.afternoon figure{background-image: url(../img/phone_afternoon.png);}
+
+/*저녁테마*/
+#wrap.evening{background-image: url(../img/bg_evening.jpg);}
+#wrap.evening figure{background-image: url(../img/phone_evening.png);}
+
+/*밤 테마*/
+#wrap.night{background-image: url(../img/bg_night.jpg);}
+#wrap.night figure{background-image: url(../img/phone_night.png);}
